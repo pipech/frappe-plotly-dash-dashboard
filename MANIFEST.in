@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include dash_dashboard *.css
+recursive-include dash_dashboard *.csv
+recursive-include dash_dashboard *.html
+recursive-include dash_dashboard *.ico
+recursive-include dash_dashboard *.js
+recursive-include dash_dashboard *.json
+recursive-include dash_dashboard *.md
+recursive-include dash_dashboard *.png
+recursive-include dash_dashboard *.py
+recursive-include dash_dashboard *.svg
+recursive-include dash_dashboard *.txt
+recursive-exclude dash_dashboard *.pyc
