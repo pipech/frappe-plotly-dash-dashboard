@@ -17,6 +17,62 @@ def get_layout():
     layout = [
         html.Div([
             html.Div([
+                html.Div([
+                    html.Div([
+                        html.Div([
+                            'Sales'
+                        ], className='card-header narrow'),
+                        html.Div([
+                            html.Div([
+                                html.Div([
+                                    '93k'
+                                ], className='text-value'),
+                                html.Div([
+                                    'Total'
+                                ], className='text-uppercase text-muted small'),
+                            ]),
+                            html.Div([
+                                html.Div([
+                                    '2.2m'
+                                ], className='text-value'),
+                                html.Div([
+                                    'Total (USD)'
+                                ], className='text-uppercase text-muted small'),
+                            ]),
+                        ], className='brand-card-body'),
+                    ])
+                ], className='brand-card'),
+            ], className='col-md-3'),
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.Div([
+                            'Purchase'
+                        ], className='card-header narrow'),
+                        html.Div([
+                            html.Div([
+                                html.Div([
+                                    '93k'
+                                ], className='text-value'),
+                                html.Div([
+                                    'Total'
+                                ], className='text-uppercase text-muted small'),
+                            ]),
+                            html.Div([
+                                html.Div([
+                                    '2.2m'
+                                ], className='text-value'),
+                                html.Div([
+                                    'Total (USD)'
+                                ], className='text-uppercase text-muted small'),
+                            ]),
+                        ], className='brand-card-body'),
+                    ])
+                ], className='brand-card'),
+            ], className='col-md-3'),
+        ], className='row'),
+        html.Div([
+            html.Div([
                 pie_bar_chart(),
             ], className='col-md-6'),
             html.Div([
