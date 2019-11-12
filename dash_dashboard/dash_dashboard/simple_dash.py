@@ -1,5 +1,6 @@
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_table
 import frappe
 import pandas as pd
 import plotly.graph_objs as go
@@ -102,7 +103,40 @@ def get_layout():
                 line_chart(),
             ], className='col-md-12'),
         ], className='row'),
+        html.Div([
+            html.Div([
+                get_dash_table(),
+            ], className='col-md-12'),
+        ], className='row'),
     ]
+
+    return layout
+
+
+def get_dash_table():
+    df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/solar.csv')
+
+    layout = html.Div([
+        html.Div([
+            'Example table'
+        ], className='card-header'),
+        html.Div([
+            dash_table.DataTable(
+                id='table',
+                columns=[{'name': i, 'id': i} for i in df.columns],
+                style_cell_conditional=[
+                    {
+                        'if': {'column_id': 'State'},
+                        'textAlign': 'left'
+                    }
+                ],
+                style_cell={
+                    'padding': '5px',
+                },
+                data=df.to_dict('records'),
+            ),
+        ], className='card-body'),
+    ], className='card')
 
     return layout
 
