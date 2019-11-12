@@ -21,6 +21,34 @@ def get_layout():
                 html.Div([
                     html.Div([
                         html.Div([
+                            html.Div([
+                                dcc.Dropdown(
+                                    options=[
+                                        {'label': 'New York City', 'value': 'NYC'},
+                                        {'label': 'Montréal', 'value': 'MTL'},
+                                        {'label': 'San Francisco', 'value': 'SF'},
+                                    ],
+                                    multi=True,
+                                    value="MTL",
+                                ),
+                            ], className='col-md-4'),
+                            html.Div([
+                                dcc.Input(
+                                    placeholder='Enter a value...',
+                                    type='text',
+                                    value=''
+                                )
+                            ], className='col-md-4'),
+                        ], className='row'),
+                    ], className='card-body'),
+                ], className='card card-accent-primary')
+            ], className='col-md-12'),
+        ], className='row'),
+        html.Div([
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.Div([
                             'Sales'
                         ], className='card-header narrow'),
                         html.Div([
